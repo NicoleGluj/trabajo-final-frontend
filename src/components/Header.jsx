@@ -1,13 +1,15 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header>
-      <img src="" alt="imagen de logo" />
+      {/* <img src="#" alt="imagen de logo" /> */}
       <nav>
         <ul>
-          <li><a href="/">INICIO</a></li>
-          <li><a href="/dashboard">DASHBOARD</a></li>
-          <li><a href="/login">LOGIN</a></li>
-          <li><a href="/register">REGISTRO</a></li>
+          <li><Link to="/">INICIO</Link></li>
+          <li><Link to="/dashboard">DASHBOARD</Link></li>
+          <li><Link to="/login">LOGIN</Link></li>
+          <li><Link to="/register">REGISTRO</Link></li>
           <button>CERRAR SESION</button>
         </ul>
       </nav>

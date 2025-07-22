@@ -2,7 +2,9 @@ import Layout from "../components/Layout"
 
 const Home = () => {
   return (
-    <Layout />
+    <Layout>
+      <h1>hola</h1>
+    </Layout>
   )
 }
 

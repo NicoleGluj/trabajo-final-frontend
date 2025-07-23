@@ -1,16 +1,20 @@
 import { Link } from "react-router-dom";
+import '../styles/components/header.css'
 
 const Header = () => {
   return (
     <header>
-      {/* <img src="#" alt="imagen de logo" /> */}
+      <h2>THE PRODUCT</h2>
       <nav>
-        <ul>
+        <ul className="ul-service">
           <li><Link to="/">INICIO</Link></li>
-          <li><Link to="/dashboard">DASHBOARD</Link></li>
-          <li><Link to="/login">LOGIN</Link></li>
-          <li><Link to="/register">REGISTRO</Link></li>
-          <button>CERRAR SESION</button>
+          <li><a href="#conocenos">CONOCENOS</a></li>
+          <li><a href="#servicios">SERVICIOS </a></li>
+          <li><a href="#contacto">CONTACTO </a></li>
+        </ul>
+        <ul className="ul-login">
+          <li><Link to="/login">INICIAR SESION</Link></li>
+          <li><Link to="/register"> REGISTRO</Link></li>
         </ul>
       </nav>
     </header>

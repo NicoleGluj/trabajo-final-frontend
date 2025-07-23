@@ -1,6 +1,6 @@
 header {
   margin: 30px;
-  background-color: rgb(255, 248, 240);
+  background-color: rgba(221, 221, 221, 0.349);
   font-family: "Host Grotesk", sans-serif;
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,7 @@ nav {
   padding: 10px;
   border-radius: 10px;
   border: none;
-  background-color: rgba(255, 194, 61, 0.562);
+  background-color: #FFB500;
   font-weight: 600;
 }
 

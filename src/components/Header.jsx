@@ -10,11 +10,10 @@ const Header = () => {
           <li><Link to="/">INICIO</Link></li>
           <li><a href="#conocenos">CONOCENOS</a></li>
           <li><a href="#servicios">SERVICIOS </a></li>
-          <li><a href="#contacto">CONTACTO </a></li>
+          <li><a href="#footer">CONTACTO </a></li>
         </ul>
         <ul className="ul-login">
-          <li><Link to="/login">INICIAR SESION</Link></li>
-          <li><Link to="/register"> REGISTRO</Link></li>
+          <li><Link to="/auth">INGRESAR</Link></li>
         </ul>
       </nav>
     </header>

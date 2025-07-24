@@ -7,55 +7,61 @@
 
 /* INICIO STYLE */
 
-#inicio {
+#content-inicio {
   margin: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 40px;
+  border-radius: 20px;
   padding: 40px;
   background-color: rgba(228, 228, 228, 0.39);
 }
 
-#inicio h1 {
+.content-inicio-text h1 {
   font-size: 170px;
-  color: #e7a601;
+  color: #FFB500;
 }
 
-#inicio h2 {
+.content-inicio-text h2 {
   font-size: 30px;
-  text-align: center;
+  text-align: end;
 }
 
-#inicio img {
+.content-inicio-img img {
   background: radial-gradient(circle, rgba(255, 230, 156, 1) 40%, rgba(255, 181, 0, 1) 100%);
   position: relative;
-  border-radius: 300px 300px 10px 10px;
+  border-radius: 300px 350px 300px 10px;
+  border: 5px solid black;
+  max-width: 100%;
 }
+
+/* INICIO RESPONSIVE */
+
 
 /* CONOCENOS STYLE */
 
-#conocenos {
+#content-about {
   margin: 30px;
-  border-radius: 40px;
-  padding: 30px;
-  background-color: rgba(228, 228, 228, 0.39);
+  border-radius: 20px;
+  padding: 50px;
+  border: 5px solid #FFB500;
 }
 
-#conocenos h2 {
+.about-title h2 {
   font-size: 40px;
+  margin-bottom: 10px;
 }
 
-.about-content {
+.about-sections {
   display: flex;
-  align-items: first baseline;
   justify-content: center;
   gap: 40px;
 }
 
-.about-content p {
-  background-color: #ffbb11;
-  padding: 40px;
+
+.about-section {
+  background-color: #ffc32cef;
+  padding: 20px;
   border-radius: 30px;
   font-size: 20px;
 }

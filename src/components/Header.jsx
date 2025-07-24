@@ -4,17 +4,19 @@ import '../styles/components/header.css'
 const Header = () => {
   return (
     <header>
-      <h2>THE PRODUCT</h2>
-      <nav>
-        <ul className="ul-service">
+      <div className="logo-brand">
+        <img src="src\assets\favicon.png" alt="" />
+        <h2>THE PRODUCT</h2>
+      </div>
+      <nav className="content-nav">
+        <ul className="content-section">
           <li><Link to="/">INICIO</Link></li>
-          <li><a href="#conocenos">CONOCENOS</a></li>
-          <li><a href="#servicios">SERVICIOS </a></li>
-          <li><a href="#footer">CONTACTO </a></li>
+          <li><a href="#content-about">CONOCENOS</a></li>
+          <li><a href="#content-services">SERVICIOS </a></li>
+          <li><a href="#content-footer">CONTACTO </a></li>
         </ul>
-        <ul className="ul-login">
-          <li><Link to="/auth">INGRESAR</Link></li>
-        </ul>
+        <button className="button-login"><Link to="/login">INGRESAR</Link></button>
+        <button className="button-register"><Link to="/register">REGISTRAR</Link></button>
       </nav>
     </header>
   )

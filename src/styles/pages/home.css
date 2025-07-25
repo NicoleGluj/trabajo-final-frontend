@@ -24,7 +24,7 @@
 
 .content-inicio-text h2 {
   font-size: 30px;
-  text-align: end;
+  text-align: start;
 }
 
 .content-inicio-img img {
@@ -41,47 +41,62 @@
 /* CONOCENOS STYLE */
 
 #content-about {
-  margin: 30px;
   border-radius: 20px;
-  padding: 50px;
   border: 5px solid #FFB500;
+  margin-top: 50px;
+  margin: 30px;
+  display: flex;
+  gap: 50px;
+  background-color: #FFB500;
+}
+
+#content-about img {
+  width: 900px;
+  border-radius: 20px;
+}
+
+.about-title {
+  margin: 100px;
+  color: white;
 }
 
 .about-title h2 {
+  font-size: 70px;
+}
+
+.about-title p {
   font-size: 40px;
-  margin-bottom: 10px;
+  font-weight: 700;
 }
 
-.about-sections {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+.about-button {
+  padding: 25px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: black;
+  font-weight: 600;
+  font-size: 19px;
+  margin-top: 40px;
 }
 
-
-.about-section {
-  background-color: #ffc32cef;
-  padding: 20px;
-  border-radius: 30px;
-  font-size: 20px;
-}
 
 /* SERVICIOS STYLE */
 
-#servicios {
+#content-services {
   margin: 30px;
-  border-radius: 40px;
-  padding: 30px;
+  border-radius: 20px;
+  padding: 50px;
   background-color: rgba(228, 228, 228, 0.39);
 }
 
-#servicios h2 {
-  font-size: 40px;
+#content-services h2 {
+  font-size: 60px;
 }
 
 .services-content {
   display: flex;
-  align-items: first baseline;
+  align-items: stretch;
   justify-content: center;
   gap: 40px;
   margin-top: 30px;
@@ -90,6 +105,14 @@
 .service-content {
   border-radius: 30px;
   font-size: 20px;
-  background-color: #ffbb11;
-  padding: 20px;
+  border: 5px solid #FFB500;
+  background-color: white;
+  padding: 40px;
+  height: 100%;
+}
+
+.service-content h3 {
+  text-transform: uppercase;
+  font-size: 25px;
+  text-align: center;
 }

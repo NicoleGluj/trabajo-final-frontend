@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout"
+import CardAuth from "../components/CardAuth";
 
 const Register = () => {
   const [username, setUsername] = useState("")
@@ -39,7 +40,24 @@ const Register = () => {
 
   return (
     <Layout>
-      <section>
+      <CardAuth>
+        <div className='card-auth-content'>
+          <h3>REGISTARSE</h3>
+          <div className="card-inputs">
+            <label>Nombre de usuario</label>
+            <input type="text" />
+            <label>Correo Electronico</label>
+            <input type="email" />
+            <label>Contraseña</label>
+            <input type="password" />
+          </div>
+          <button className="card-button">REGISTRARME</button>
+        </div>
+      </CardAuth>
+
+
+
+      {/* <section>
         <form onSubmit={handleSubmit}>
           <div>
             <label>Username</label>
@@ -47,7 +65,7 @@ const Register = () => {
               type="text"
               onChange={(e) => setUsername(e.target.value)}
               value={username} />
-            {/* OPCION 2 PARA MANEJAR CHANGE, SI TENGO QUE HACER MAS DE UNA TAREA, NO SERVIRIA */}
+            OPCION 2 PARA MANEJAR CHANGE, SI TENGO QUE HACER MAS DE UNA TAREA, NO SERVIRIA
           </div>
           <div>
             <label>Correo Electronico</label>
@@ -68,7 +86,7 @@ const Register = () => {
 
         <p>{error}</p>
         <p>{success}</p>
-      </section>
+      </section> */}
     </Layout>
   )
 }

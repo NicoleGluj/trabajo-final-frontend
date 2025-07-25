@@ -1,0 +1,32 @@
+.card-content {
+  background-color: rgba(221, 221, 221, 0.349);
+  margin: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70vh;
+}
+
+.card-title {
+  background-image: url("src/assets/mujer-pelirroja-mirando-por-telefono.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  border-radius: 20px;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-title h3 {
+  font-size: 50px;
+  color: #e6a400;
+  background-color: rgba(230, 230, 230, 0.76);
+  border-radius: 20px;
+  padding: 20px;
+}

@@ -18,7 +18,7 @@
 }
 
 .content-inicio-text h1 {
-  font-size: 170px;
+  font-size: 150px;
   color: #FFB500;
 }
 
@@ -32,10 +32,43 @@
   position: relative;
   border-radius: 300px 350px 300px 10px;
   border: 5px solid black;
-  max-width: 100%;
+  max-width: 700px;
 }
 
 /* INICIO RESPONSIVE */
+
+/* @media (min-width: 1200px) {
+  .content-inicio-text h1 {
+    font-size: 110px;
+  }
+
+  .content-inicio-text h2 {
+    font-size: 25px;
+  }
+
+  .content-inicio-img img {
+    max-width: 700px;
+
+  }
+
+} */
+
+/* @media (max-width: 1200px) {
+  .content-inicio-text h1 {
+    font-size: 170px;
+  }
+
+  .content-inicio-text h2 {
+    font-size: 50px;
+  }
+
+  .content-inicio-img img {
+    max-width: 900px;
+
+  }
+
+} */
+
 
 
 /* CONOCENOS STYLE */
@@ -79,6 +112,22 @@
   font-size: 19px;
   margin-top: 40px;
 }
+
+/* ABOUT RESPONSIVE */
+/* @media (min-width: 1200px) {
+  .about-title h2 {
+    font-size: 60px;
+  }
+
+  .about-title p {
+    font-size: 25px;
+  }
+
+  #content-about img {
+    max-width: 500px;
+  }
+
+} */
 
 
 /* SERVICIOS STYLE */

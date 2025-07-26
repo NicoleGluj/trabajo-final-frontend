@@ -10,15 +10,18 @@
 #content-inicio {
   margin: 30px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
   border-radius: 20px;
   padding: 40px;
-  background-color: rgba(228, 228, 228, 0.39);
+  background-image: url("src/assets/mujer-joven-feliz-pagando-con-telefono-inteligente-y-tarjeta-de-credito-de-plastico-de-pie-sobre-una-pared-blanca.jpg");
+  background-size: cover;
+  background-position: center top 20%;
+  background-repeat: no-repeat;
+  height: 85vh;
 }
 
 .content-inicio-text h1 {
-  font-size: 150px;
+  font-size: 140px;
   color: #FFB500;
 }
 
@@ -27,107 +30,60 @@
   text-align: start;
 }
 
-.content-inicio-img img {
-  background: radial-gradient(circle, rgba(255, 230, 156, 1) 40%, rgba(255, 181, 0, 1) 100%);
-  position: relative;
-  border-radius: 300px 350px 300px 10px;
-  border: 5px solid black;
-  max-width: 700px;
-}
 
 /* INICIO RESPONSIVE */
-
-/* @media (min-width: 1200px) {
-  .content-inicio-text h1 {
-    font-size: 110px;
-  }
-
-  .content-inicio-text h2 {
-    font-size: 25px;
-  }
-
-  .content-inicio-img img {
-    max-width: 700px;
-
-  }
-
-} */
-
-/* @media (max-width: 1200px) {
-  .content-inicio-text h1 {
-    font-size: 170px;
-  }
-
-  .content-inicio-text h2 {
-    font-size: 50px;
-  }
-
-  .content-inicio-img img {
-    max-width: 900px;
-
-  }
-
-} */
-
 
 
 /* CONOCENOS STYLE */
 
 #content-about {
   border-radius: 20px;
-  border: 5px solid #FFB500;
   margin-top: 50px;
   margin: 30px;
   display: flex;
-  gap: 50px;
-  background-color: #FFB500;
+  background-color: rgb(238, 238, 238);
 }
 
 #content-about img {
-  width: 900px;
+  width: 50%;
   border-radius: 20px;
+  margin: 20px;
 }
 
 .about-title {
-  margin: 100px;
   color: white;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #FFB500;
+  border-radius: 20px;
+  padding: 40px;
+  margin: 20px;
 }
 
 .about-title h2 {
-  font-size: 70px;
+  font-size: 60px;
 }
 
 .about-title p {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: justify;
 }
 
 .about-button {
-  padding: 25px;
+  padding: 15px;
   border-radius: 10px;
   border: none;
-  color: white;
-  background-color: black;
+  color: #FFB500;
+  background-color: white;
   font-weight: 600;
   font-size: 19px;
   margin-top: 40px;
 }
 
 /* ABOUT RESPONSIVE */
-/* @media (min-width: 1200px) {
-  .about-title h2 {
-    font-size: 60px;
-  }
-
-  .about-title p {
-    font-size: 25px;
-  }
-
-  #content-about img {
-    max-width: 500px;
-  }
-
-} */
 
 
 /* SERVICIOS STYLE */
@@ -140,28 +96,39 @@
 }
 
 #content-services h2 {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .services-content {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: 40px;
+  gap: 10px;
   margin-top: 30px;
 }
 
 .service-content {
-  border-radius: 30px;
-  font-size: 20px;
-  border: 5px solid #FFB500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  font-size: 18px;
+  border: 2px solid #b4b4b4;
   background-color: white;
   padding: 40px;
-  height: 100%;
 }
 
 .service-content h3 {
   text-transform: uppercase;
-  font-size: 25px;
-  text-align: center;
+  font-size: 23px;
+  text-align: start;
+  margin-bottom: -20px;
+}
+
+/* AJUSTE ICONOS */
+.bi {
+  font-size: 50px;
+  margin-bottom: 50px;
+  color: #FFB500;
 }

@@ -47,9 +47,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <div className="content-inicio-img">
-          <img src="src\assets\repartidor.png" alt="" />
-        </div> */}
+
 
     </Layout>
   )

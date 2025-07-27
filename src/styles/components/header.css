@@ -70,10 +70,11 @@ a {
 
 @media (max-width: 768px) {
   header {
-    background-color: #FFB500;
+    background-color: #ececec;
     display: flex;
     flex-direction: column;
     width: auto;
+    padding: 5px;
   }
 
   .logo-brand {

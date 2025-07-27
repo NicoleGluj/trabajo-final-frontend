@@ -68,7 +68,7 @@ a {
 
 /* RESPONSIVE NAVBAR / MENU HAMBURGUESA */
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   header {
     background-color: #ececec;
     display: flex;

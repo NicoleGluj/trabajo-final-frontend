@@ -141,6 +141,67 @@
 
 
 /* HOME RESPONSIVE */
+@media (max-width: 1439px) {
+  /* RESPONSIVE INICIO */
+
+  .content-inicio-text {
+    background-color: #eeeeeec7;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .content-inicio-text h1 {
+    font-size: 120px;
+  }
+
+  .content-inicio-text h2 {
+    font-size: 30px;
+  }
+
+  /* RESPONSIVE ABOUT */
+
+  .about-title h2 {
+    font-size: 45px;
+  }
+
+  .about-title p {
+    font-size: 15px;
+    margin-top: 15px;
+  }
+
+  .about-button {
+    width: 100%;
+  }
+
+  /* RESPONSIVE SERVICE */
+
+  #content-services h2 {
+    font-size: 40px;
+  }
+
+  .service-content {
+    padding: 25px;
+  }
+
+  .service-content h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .service-content p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .bi-bag-plus,
+  .bi-grid-3x3-gap,
+  .bi-graph-up-arrow,
+  .bi-share {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #FFB500;
+  }
+}
 
 @media (max-width: 769px) {
   /* RESPONSIVE INICIO */

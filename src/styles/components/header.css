@@ -59,3 +59,56 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.bi-list {
+  color: black;
+  font-size: 40px;
+  display: none;
+}
+
+/* RESPONSIVE NAVBAR / MENU HAMBURGUESA */
+
+@media (max-width: 768px) {
+  header {
+    background-color: #FFB500;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .logo-brand {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bi-list {
+    display: block;
+  }
+
+  .content-nav,
+  .content-buttons {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-open,
+  .button-open {
+    display: block;
+  }
+
+  .content-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .content-buttons {
+    margin-top: 30px;
+  }
+
+  .logo-brand h2 {
+    font-size: 17px;
+  }
+}

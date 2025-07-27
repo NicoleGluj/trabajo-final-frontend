@@ -127,7 +127,10 @@
 }
 
 /* AJUSTE ICONOS */
-.bi {
+.bi-bag-plus,
+.bi-grid-3x3-gap,
+.bi-graph-up-arrow,
+.bi-share {
   font-size: 50px;
   margin-bottom: 50px;
   color: #FFB500;

@@ -1,6 +1,6 @@
 .card-content {
   background-color: rgba(221, 221, 221, 0.349);
-  margin: 20px;
+  margin: 30px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -13,6 +13,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-position: center top 20%;
   padding: 40px;
   border-radius: 20px;
   height: 100%;
@@ -29,4 +30,16 @@
   background-color: rgba(230, 230, 230, 0.76);
   border-radius: 20px;
   padding: 20px;
+}
+
+/* RESPONSIVE CARD */
+
+@media (max-width: 1439px) {}
+
+@media (max-width: 769px) {}
+
+@media (max-width: 426px) {
+  .card-title {
+    display: none;
+  }
 }

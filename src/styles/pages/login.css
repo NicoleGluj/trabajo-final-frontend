@@ -12,18 +12,25 @@
   margin-bottom: 40px;
 }
 
-.card-inputs {
+.card-form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.card-inputs label {
+.card-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card-input label {
   font-size: 18px;
 }
 
-.card-inputs input {
+.card-input input {
   padding: 7px;
   border-radius: 20px;
   border: 2px solid #FFB500;

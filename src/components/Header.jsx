@@ -4,6 +4,7 @@ import { useState } from "react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [user, setUser] = useState(false)
 
   const handleOpen = () => {
     setIsOpen(!isOpen)
@@ -19,14 +20,22 @@ const Header = () => {
       <nav className={`content-nav ${isOpen ? "nav-open" : ""}`}>
         <ul className="content-section">
           <li><Link to="/">INICIO</Link></li>
-          <li><a href="#content-about">CONOCENOS</a></li>
-          <li><a href="#content-services">SERVICIOS </a></li>
-          <li><a href="#content-footer">CONTACTO </a></li>
+          {
+            !user && <>
+              <li><a href="#content-about">CONOCENOS</a></li>
+              <li><a href="#content-services">SERVICIOS </a></li>
+              <li><a href="#content-footer">CONTACTO </a></li>
+            </>
+          }
         </ul>
       </nav>
       <div className={`content-buttons ${isOpen ? "button-open" : ""}`}>
-        <button className="button-login"><Link to="/login">INGRESAR</Link></button>
-        <button className="button-register"><Link to="/register">REGISTRAR</Link></button>
+        {
+          !user && <>
+            <button className="button-login"><Link to="/login">INGRESAR</Link></button>
+            <button className="button-register"><Link to="/register">REGISTRAR</Link></button>
+          </>
+        }
       </div>
     </header>
   )

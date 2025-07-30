@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "../components/Layout"
 import CardAuth from "../components/CardAuth";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [username, setUsername] = useState("")
@@ -56,7 +57,7 @@ const Register = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password} />
             </div>
-            <button className="card-button">REGISTRARME</button>
+            <button className="card-button"> <Link to="/dashboard">REGISTRARME</Link></button>
           </form>
 
           {

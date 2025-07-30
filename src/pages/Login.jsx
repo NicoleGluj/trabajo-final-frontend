@@ -2,6 +2,7 @@ import { useState } from "react";
 import CardAuth from "../components/CardAuth";
 import Layout from "../components/Layout"
 import '../styles/pages/login.css'
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("")
@@ -46,7 +47,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password} />
             </div>
-            <button className="card-button">INGRESAR</button>
+            <button className="card-button"> <Link to="/dashboard">INGRESAR</Link></button>
           </form>
 
           {

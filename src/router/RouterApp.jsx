@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import NotFound from "../pages/NotFound";
+import Inicio from "../pages/Inicio";
 
 const RouterApp = () => {
   return (
@@ -12,6 +13,7 @@ const RouterApp = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/inicio" element={<Inicio />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

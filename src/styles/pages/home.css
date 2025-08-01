@@ -131,9 +131,9 @@
 
 /* AJUSTE ICONOS */
 .bi-bag-plus,
-.bi-grid-3x3-gap,
-.bi-graph-up-arrow,
-.bi-share {
+.bi-box-seam,
+.bi-wallet2,
+.bi-people-fill {
   font-size: 50px;
   margin-bottom: 50px;
   color: #FFB500;
@@ -194,9 +194,9 @@
   }
 
   .bi-bag-plus,
-  .bi-grid-3x3-gap,
-  .bi-graph-up-arrow,
-  .bi-share {
+  .bi-box-seam,
+  .bi-wallet2,
+  .bi-people-fill {
     font-size: 50px;
     margin-bottom: 15px;
     color: #FFB500;
@@ -299,9 +299,9 @@
   }
 
   .bi-bag-plus,
-  .bi-grid-3x3-gap,
-  .bi-graph-up-arrow,
-  .bi-share {
+  .bi-box-seam,
+  .bi-wallet2,
+  .bi-people-fill {
     font-size: 50px;
     margin-bottom: 15px;
     color: #FFB500;
@@ -399,9 +399,9 @@
   }
 
   .bi-bag-plus,
-  .bi-grid-3x3-gap,
-  .bi-graph-up-arrow,
-  .bi-share {
+  .bi-box-seam,
+  .bi-wallet2,
+  .bi-people-fill {
     font-size: 50px;
     margin-bottom: 15px;
     color: #FFB500;

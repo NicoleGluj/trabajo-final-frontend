@@ -6,7 +6,7 @@ const Footer = () => {
       <div id='text-footer'>
         <div className='contact-content'>
           <h3>CONTACTO</h3>
-          <p>theProductoArea@gmail.com</p>
+          <p>TheProductArea@gmail.com</p>
           <p>+54 9 11 3456 7898</p>
           <p>Buenos Aires, Argentina</p>
         </div>

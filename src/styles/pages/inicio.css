@@ -7,7 +7,7 @@
 
 .inicio-title h2 {
   font-size: 35px;
-  margin-bottom: -30px;
+  margin-bottom: 20px;
   color: black;
 }
 
@@ -98,4 +98,60 @@
   font-size: 16px;
   width: 100%;
   margin-top: 20px;
+}
+
+/* CONTENEDOR POP UP */
+.content-popup {
+  background-color: #ffb700;
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 1px -3px 13px 1px rgba(112, 112, 112, 0.74);
+  -webkit-box-shadow: 1px -3px 13px 1px rgba(112, 112, 112, 0.74);
+  -moz-box-shadow: 1px -3px 13px 1px rgba(112, 112, 112, 0.74);
+}
+
+.content-popup h2 {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.content-edit-form {
+  display: flex;
+
+  flex-direction: column;
+  width: 600px;
+}
+
+.content-input-edit input,
+.content-input-edit textarea {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 7px;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+.content-button-edit {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-button-edit button {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+  border: none;
 }

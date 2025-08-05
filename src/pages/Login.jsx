@@ -2,29 +2,32 @@ import { useState } from "react";
 import CardAuth from "../components/CardAuth";
 import Layout from "../components/Layout"
 import '../styles/pages/login.css'
-import { Link } from "react-router-dom";
+import { useAuth } from "../context/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("")
+  const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
 
-  const handleSubmit = (e) => {
+  const { login } = useAuth()
+  const nagivate = useNavigate()
+
+  const handleLogin = async (e) => {
     e.preventDefault()
     setError("")
 
-    if (!email || !password) {
+    if (!username || !password) {
       setError("Debe completar todos los campos")
       return
     }
 
-    const User = {
-      email: email,
-      password: password
+    const isLogin = await login(username, password)
+    if (isLogin) {
+      setUsername("")
+      setPassword("")
+      nagivate("/inicio")
     }
-
-    setEmail("")
-    setPassword("")
   }
 
   return (
@@ -32,13 +35,14 @@ const Login = () => {
       <CardAuth>
         <div className='card-auth-content'>
           <h3>INICIA SESION</h3>
-          <form className="card-form" onSubmit={handleSubmit}>
+
+          <form className="card-form" onSubmit={handleLogin}>
             <div className="card-input">
-              <label>Correo Electronico</label>
+              <label>Nombre de Usuario</label>
               <input
-                type="email"
-                onChange={(e) => setEmail(e.target.value)}
-                value={email} />
+                type="text"
+                onChange={(e) => setUsername(e.target.value)}
+                value={username} />
             </div>
             <div className="card-input">
               <label>Contraseña</label>
@@ -47,7 +51,8 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password} />
             </div>
-            <button className="card-button"> <Link to="/inicio">INGRESAR</Link></button>
+
+            <button className="card-button">INGRESAR</button>
           </form>
 
           {

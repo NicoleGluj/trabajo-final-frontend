@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import Layout from "../components/Layout"
 import '../styles/pages/inicio.css'
+import { useAuth } from "../context/UserContext"
 
 const Inicio = () => {
   const [products, setProducts] = useState([])
-  const [user, setUser] = useState(true)
+  const { user } = useAuth()
+
   const [productToEdit, setProductToEdit] = useState(null)
   const [showPopUp, setShowPopUp] = useState(null)
   const [titleEdit, setTitleEdit] = useState("")
@@ -23,7 +25,6 @@ const Inicio = () => {
   useEffect(() => {
     fetchingProducts()
   }, [])
-
 
   const handleDelete = async (id) => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`, { method: "DELETE" })
@@ -72,7 +73,6 @@ const Inicio = () => {
       )
     }
   }
-
 
 
   return (

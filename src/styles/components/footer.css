@@ -1,12 +1,44 @@
 footer {
   background-color: #FFB500;
   font-family: "Host Grotesk", sans-serif;
-  height: 200px;
-  display: flex;
-  align-items: first baseline;
-  justify-content: center;
+  padding: 40px;
 }
 
-p {
-  margin-top: 50px;
+#content-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#text-footer {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.contact-content {
+  line-height: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.coment-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+}
+
+.coment-content input,
+.coment-content textarea {
+  width: 370px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.text-desarrollado {
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid rgb(165, 102, 0);
+  padding: 20px;
 }

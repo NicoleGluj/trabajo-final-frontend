@@ -129,6 +129,10 @@
   margin-bottom: -20px;
 }
 
+.service-content p {
+  margin-top: 50px;
+}
+
 /* AJUSTE ICONOS */
 .bi-bag-plus,
 .bi-box-seam,

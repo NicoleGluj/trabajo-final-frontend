@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Layout from "../components/Layout"
+import '../styles/pages/inicio.css'
 
 const Inicio = () => {
   const [products, setProducts] = useState([])
@@ -76,6 +77,34 @@ const Inicio = () => {
 
   return (
     <Layout>
+      <div className="inicio-title">
+        <h2>EXPLORA NUESTRO CATALOGO</h2>
+        <p>Descubrí productos únicos y opciones para todos los gustos.</p>
+      </div>
+      <div className="content-products">
+        {
+          products.map((product) =>
+            <div key={product.id} className="content-product">
+              <h4>Categoria: {product.category}</h4>
+              <div className="content-image">
+                <img src={product.image} alt={`Imagen de ${product.title}`} />
+              </div>
+              <h2>{product.title}</h2>
+              <p>{product.description}</p>
+              <h3>${product.price}</h3>
+              {
+                user && <div className="content-button">
+                  <button
+                    onClick={() => handleOpenEdit(product)}
+                    className="button-act">ACTUALIZAR</button>
+                  <button onClick={() => handleDelete(product.id)} className="button-del">BORRAR</button>
+                </div>
+              }
+            </div>)
+        }
+      </div>
+
+      {/* revisar */}
       {
         showPopUp && <section>
           <h2>Editar Producto</h2>
@@ -109,22 +138,8 @@ const Inicio = () => {
           </form>
         </section>
       }
-      {
-        products.map((product) =>
-          <div key={product.id}>
-            <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
-            <h2 >{product.title}</h2>
-            <p>${product.price}</p>
-            <p>{product.description}</p>
-            <p><strong>{product.category}</strong></p>
-            {
-              user && <div>
-                <button onClick={() => handleOpenEdit(product)}>ACTUALIZAR</button>
-                <button onClick={() => handleDelete(product.id)}>BORRAR</button>
-              </div>
-            }
-          </div>)
-      }
+
+
     </Layout>
   )
 }

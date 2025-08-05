@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
+import '../styles/pages/dashboard.css'
+
 
 const Dashboard = () => {
 
@@ -45,11 +47,11 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <div>
+      <div className="dash-title">
         <h2>cargar nuevo producto</h2>
       </div>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form className="dash-form-content" onSubmit={handleSubmit}>
+        <div className="dash-form-inputs">
           <label>Nombre del producto</label>
           <input
             type="text"
@@ -57,7 +59,7 @@ const Dashboard = () => {
             onChange={(e) => setName(e.target.value)}
             value={name} />
         </div>
-        <div>
+        <div className="dash-form-inputs">
           <label>Precio del producto</label>
           <input
             type="number"
@@ -65,9 +67,9 @@ const Dashboard = () => {
             onChange={(e) => setPrice(e.target.value)}
             value={price} />
         </div>
-        <div>
+        <div className="dash-form-inputs">
           <label>Descripcion del producto</label>
-          <input
+          <textarea
             type="text"
             name="descripcion"
             onChange={(e) => setDescription(e.target.value)}

@@ -1,0 +1,46 @@
+.dash-title {
+  margin: 30px;
+  background-color: #eeeeeec7;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.dash-title h2 {
+  font-size: 35px;
+  color: black;
+  text-transform: uppercase;
+}
+
+.dash-form-content {
+  background-color: #eeeeeec7;
+  margin: 30px;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dash-form-inputs {
+  width: 100%;
+}
+
+.dash-form-inputs input,
+.dash-form-inputs textarea {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.dash-form-content button {
+  padding: 13px;
+  border-radius: 20px;
+  background-color: #FFB500;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+}

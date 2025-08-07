@@ -5,7 +5,7 @@ import '../styles/style.css';
 const Home = () => {
   return (
     <Layout>
-      {/* <section
+      <section
         id="content-inicio"
         className="bg-[url(src/assets/image-women-card.jpg)] bg-[center_top_20%] bg-cover bg-no-repeat m-8 flex items-end rounded-xl h-[85vh]">
         <div className="p-4 m-2 rounded-[20px] bg-gray-50/50">
@@ -69,7 +69,7 @@ const Home = () => {
             <p>Contamos con un equipo de atención disponible para responder tus consultas y ayudarte en todo momento.</p>
           </div>
         </div>
-      </section> */}
+      </section>
     </Layout>
   )
 }

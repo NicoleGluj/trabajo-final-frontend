@@ -40,10 +40,10 @@ const Header = () => {
             }
             {
               !user && <>
-                <li className="hover:text-[18px] mb-2 min-[880px]:mb-0"><a href="#content-about">CONOCENOS</a></li>
-                <li className="hover:text-[18px] mb-2 min-[880px]:mb-0"><a href="#content-services">SERVICIOS </a></li>
-                <li className="hover:text-[18px] mb-2 min-[880px]:mb-0"><a href="#content-services"> PROYECTO </a></li>
-                <li className="hover:text-[18px] mb-2 min-[880px]:mb-0"><a href="#content-footer">CONTACTO </a></li>
+                <li className="hover:text-[17px] mb-2 min-[880px]:mb-0"><a href="#content-about">CONOCENOS</a></li>
+                <li className="hover:text-[17px] mb-2 min-[880px]:mb-0"><a href="#content-services">SERVICIOS </a></li>
+                <li className="hover:text-[17px] mb-2 min-[880px]:mb-0"><a href="#content-services"> PROYECTO </a></li>
+                <li className="hover:text-[17px] mb-2 min-[880px]:mb-0"><a href="#content-footer">CONTACTO </a></li>
               </>
             }
           </ul>
@@ -59,10 +59,10 @@ const Header = () => {
             }
             {
               !user && <>
-                <button className="bg-[#ffb500] px-4 py-2 rounded-[15px] font-[600] text-white tracking-[1px]">
+                <button className="bg-[#ffb500] px-4 py-1.5 rounded-[15px] font-[600] text-white tracking-[1px]">
                   <Link to="/login">INGRESAR</Link>
                 </button>
-                <button className="border-3 border-[#FFB500] text-[#eba800] font-[700] px-4 py-1 rounded-[15px] tracking-[1px]">
+                <button className="border-3 border-[#FFB500] text-[#eba800] bg-white font-[700] px-4 py-1 rounded-[15px] tracking-[1px]">
                   <Link to="/register">REGISTRAR</Link>
                 </button>
               </>

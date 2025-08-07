@@ -1,7 +1,7 @@
 header {
   margin: 30px;
   background-color: rgba(221, 221, 221, 0.349);
-  font-family: "Host Grotesk", sans-serif;
+  /* font-family: "Host Grotesk", sans-serif; */
   display: flex;
   justify-content: space-between;
   align-items: center;

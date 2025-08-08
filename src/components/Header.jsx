@@ -17,7 +17,7 @@ const Header = () => {
   }
 
   return (
-    <header className="m-[15px] bg-gray-200 p-2 rounded-[20px]">
+    <header className="m-[15px] bg-[#ececec] p-2 rounded-[15px]">
       <nav className="min-[880px]:flex min-[880px]:flex-row min-[880px]:items-center min-[880px]:justify-between ">
         <section className="flex justify-between items-center">
           <div className="flex items-center justify-center">

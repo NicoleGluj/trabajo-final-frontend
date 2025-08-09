@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Layout from "../components/Layout"
 import CardAuth from "../components/CardAuth";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/UserContext";
 
 const Register = () => {
   const [username, setUsername] = useState("")
@@ -9,7 +10,10 @@ const Register = () => {
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
 
-  const handleSubmit = (e) => {
+  const { register } = useAuth()
+  const navigate = useNavigate()
+
+  const handleRegister = async (e) => {
     e.preventDefault()
     setError("")
 
@@ -19,15 +23,20 @@ const Register = () => {
     }
 
     const newUser = {
+      id: crypto.randomUUID(),
       username: username,
       email: email,
       password: password
     }
 
-    // limpio inputs
-    setUsername("")
-    setEmail("")
-    setPassword("")
+    const isRegister = await register(newUser)
+    if (isRegister) {
+      setUsername("")
+      setEmail("")
+      setPassword("")
+      navigate("/inicio")
+    }
+
   }
 
   return (
@@ -37,7 +46,7 @@ const Register = () => {
           <h3 className="text-3xl font-bold text-black mb-5 ">REGISTARSE</h3>
 
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleRegister}
             className="flex items-center justify-center flex-col gap-4">
             <div className="flex items-center justify-center flex-col gap-2">
               <label>Nombre de usuario:</label>

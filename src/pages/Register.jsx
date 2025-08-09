@@ -8,6 +8,7 @@ const Register = () => {
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState("")
 
   const { register } = useAuth()
@@ -19,6 +20,18 @@ const Register = () => {
 
     if (!username || !email || !password) {
       setError("Debe completar todos los campos")
+      return
+    } else if (username.length <= 4) {
+      setError("El nombre de usuario debe tener al menos 4 caracteres")
+      return
+    } else if (username.length >= 20) {
+      setError("El nombre de usuario no debe superar los 20 caracteres")
+      return
+    } else if (password.length <= 6) {
+      setError("La contraseña debe tener al menos 6 caracteres")
+      return
+    } else if (password != confirmPassword) {
+      setError("Las contraseñas no coinciden")
       return
     }
 
@@ -36,7 +49,6 @@ const Register = () => {
       setPassword("")
       navigate("/inicio")
     }
-
   }
 
   return (
@@ -76,6 +88,8 @@ const Register = () => {
                 <input
                   className="p-2 border-1 border-[#ffb500] rounded-full"
                   type="password"
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  value={confirmPassword}
                 />
               </div>
             </div>

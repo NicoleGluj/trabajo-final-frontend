@@ -18,10 +18,13 @@ const Login = () => {
 
     if (!username || !password) {
       setError("Debe completar todos los campos")
+      return
     } else if (username != "johnd" && password != "m38rmF$") {
       setError("Credenciales incorrectas")
+      return
     } else if (username != "johnd") {
       setError("Nombre de usuario incorrecto")
+      return
     } else if (password != "m38rmF$") {
       setError("Constraseña incorrecta")
       return

@@ -1,12 +1,9 @@
 import { useState } from "react";
 import CardAuth from "../components/CardAuth";
 import Layout from "../components/Layout"
-// import '../styles/pages/login.css'
 import { useAuth } from "../context/UserContext";
 import { Link, useNavigate } from "react-router-dom";
 
-
-// [#FFB500]
 const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")

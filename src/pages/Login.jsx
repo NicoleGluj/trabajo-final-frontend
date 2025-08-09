@@ -21,6 +21,12 @@ const Login = () => {
 
     if (!username || !password) {
       setError("Debe completar todos los campos")
+    } else if (username != "johnd" && password != "m38rmF$") {
+      setError("Credenciales incorrectas")
+    } else if (username != "johnd") {
+      setError("Nombre de usuario incorrecto")
+    } else if (password != "m38rmF$") {
+      setError("Constraseña incorrecta")
       return
     }
 
@@ -70,6 +76,12 @@ const Login = () => {
               INGRESAR
             </button>
           </form>
+          {
+            error &&
+            <p className="m-3 text-red-600">
+              {error}
+            </p>
+          }
 
           <div className="flex text-sm text-gray-600 gap-1 p-3 border-t-1 border-gray-300">
             <p>¿No tenes una cuenta?</p>
@@ -79,10 +91,6 @@ const Login = () => {
             >Registrate
             </Link>
           </div>
-
-          {
-            error && <p>{error}</p>
-          }
         </div>
       </CardAuth>
     </Layout>

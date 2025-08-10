@@ -7,14 +7,12 @@ const Home = () => {
     <Layout>
       <section
         id="content-inicio"
-        className="bg-[url(src/assets/image-women-card.jpg)] bg-[center_top_20%] bg-cover bg-no-repeat m-[15px] flex items-end max-[480px]:items-center rounded-[15px] h-[85vh] max-[480px]:text-center  max-[480px]:bg-gray-50/60">
-        <div className="p-4 m-2 rounded-[15px] bg-gray-50/60">
-          <h1
-            className="max-[480px]:h-100%
-            max-[480px]:text-[53px] max-[880px]:text-[85px] text-[120px] text-[#FFB500] font-[700]">
+        className="bg-[url(src/assets/image-women-card.jpg)]  bg-[center_top_20%] bg-cover bg-no-repeat rounded-2xl h-[85vh] m-4 flex items-end justify-start">
+        <div className="p-4 m-2 rounded-2xl bg-gray-50/70">
+          <h1 className="text-[100px] min-[1441px]:text-[180px]  min-[1024px]:text-[130px] max-[880px]:text-[80px] max-[480px]:text-[53px] text-[#FFB500] font-extrabold">
             THE PRODUCT
           </h1>
-          <h2 className="max-[480px]:text-[17px] max-[880px]:text-[22px] text-[27px] font-[700] ">
+          <h2 className="text-[25px] min-[1441px]:text-[40px]  min-[1024px]:text-[30px] max-[880px]:text-[20px] max-[480px]:text-[17px] font-bold ">
             CONECTA CON UNA NUEVA FORMA DE COMPRAR.
           </h2>
         </div>
@@ -22,21 +20,27 @@ const Home = () => {
 
       <section
         id="content-about"
-        className="max-[480px]:p-0 rounded-[20px] m-[15px] p-5 gap-5 flex lg:flex-row bg-[rgb(238,238,238)] mt-[40px]">
+        className="grid grid-cols-1 min-[670px]:grid-cols-2 lg:grid-cols-2 gap-5 p-5 max-[670px]:p-0 m-4 mt-10 rounded-2xl bg-[rgb(238,238,238)] items-center">
         <img
           src="src/assets/image-women-home.jpg"
           alt="Mujer comprando online con el celular"
-          className="w-1/2 rounded-[20px] object-cover max-[480px]:hidden" />
-        <div className="text-white flex flex-col justify-around bg-[#FFB500] rounded-[15px] p-6 gap-7">
-          <h2 className="max-[480px]:text-[40px] max-[480px]:text-center max-[480px]:font-[700] text-6xl">
+          className="w-full h-full object-cover rounded-2xl max-[670px]:hidden" />
+        <div className="text-white flex flex-col min-[1440px]:justify-around bg-[#FFB500] rounded-2xl p-6 gap-3 text-sm h-full min-[1440px]:px-[200px]">
+          <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] text-center font-bold mb-4  min-[1440px]:whitespace-nowrap">
             ¿QUIENES SOMOS?
           </h2>
-          <p className="max-[480px]:text-[15px] font-normal text-justify">
-            Somos una tienda online pensada para reunir en un solo lugar una amplia variedad de productos de diferentes categorías. <br /> Creemos en la comodidad, la calidad y la atención personalizada. Por eso, trabajamos todos los días para ofrecerte una experiencia de compra fácil, segura y con opciones para todos los gustos y necesidades. <br /> The Product es un espacio pensado para vos, para acompañarte y hacer que encontrar lo que necesitás sea fácil, rápido y agradable. Porque creemos que cada producto que elegís puede sumar a tu día a día, y queremos ser parte de esa eleccion.
+          <p className="font-normal text-justify">
+            Somos una tienda online pensada para reunir en un solo lugar una amplia variedad de productos de diferentes categorías.
+          </p>
+          <p>
+            Creemos en la comodidad, la calidad y la atención personalizada. Por eso, trabajamos todos los días para ofrecerte una experiencia de compra fácil, segura y con opciones para todos los gustos y necesidades.
+          </p>
+          <p>
+            The Product es un espacio pensado para vos, para acompañarte y hacer que encontrar lo que necesitás sea fácil, rápido y agradable. Porque creemos que cada producto que elegís puede sumar a tu día a día, y queremos ser parte de esa eleccion.
           </p>
           <Link
             to="/inicio"
-            className="max-[480px]:w-full max-[480px]:text-center p-2.5 rounded-[10px] border-none bg-white text-[#FFB500] text-[20px] font-medium"
+            className="mt-4 max-[480px]:w-full max-[480px]:text-center p-2.5 rounded-[10px] border-none bg-white text-[#FFB500] text-[20px] font-medium"
           > + VER CATALOGO
           </Link>
         </div>
@@ -44,34 +48,56 @@ const Home = () => {
 
       <section
         id="content-services"
-        className="m-[15px] rounded-[15px] p-6 bg-[#e4e4e462]">
+        className="p-5 m-4 mt-10 rounded-2xl flex flex-col items-center justify-center bg-[#e4e4e462]">
         <div>
-          <h2 className="max-[480px]:text-[40px] max-[480px]:text-center max-[480px]:font-[700] text-6xl">
+          <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] text-center font-bold mb-6">
             NUESTROS SERVICIOS
           </h2>
         </div>
-        <div className="grid grid-cols-1 items-stretch justify-center gap-[10px] mt-[30px]">
-          <div className="max-[480px]:p-4 flex items-center justify-center flex-col rounded-[15px] border-[2px] border-[#b4b4b4] bg-white">
+        <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3 items-stretch justify-center">
+          <div className="p-4 flex items-center justify-center flex-col rounded-2xl shadow-md border-2 border-[#b4b4b4] bg-white">
             <i className="bi bi-bag-plus text-[50px] text-[#FFB500]"></i>
-            <h3 className="uppercase text-[15px] align-center text-center font-[700] mb-[20px]">Compra fácil y rápida</h3>
-            <p className="text-[15px] text-justify">Hacé tu pedido en pocos pasos y disfrutá de una experiencia sencilla y sin complicaciones.</p>
+            <h3 className="uppercase text-sm text-center font-bold mb-5">Compra fácil y rápida</h3>
+            <p className="text-sm text-justify">Hacé tu pedido en pocos pasos y disfrutá de una experiencia sencilla y sin complicaciones.</p>
           </div>
-          <div className="max-[480px]:p-4 flex items-center justify-center flex-col rounded-[15px] border-[2px] border-[#b4b4b4] bg-white">
+          <div className="p-4 flex items-center justify-center flex-col rounded-2xl shadow-md border-2 border-[#b4b4b4] bg-white">
             <i className="bi bi-box-seam  text-[50px] text-[#FFB500]"></i>
-            <h3 className="uppercase text-[15px] align-center text-center font-[700] mb-[20px]">Envios a todo el país</h3>
-            <p className="text-[15px] text-justify">Enviamos a todo el país para que tus compras lleguen rápido y seguro hasta la puerta de tu casa.</p>
+            <h3 className="uppercase text-sm text-center font-bold mb-5">Envios a todo el país</h3>
+            <p className="text-sm text-justify">Enviamos a todo el país para que tus compras lleguen rápido y seguro hasta la puerta de tu casa.</p>
           </div>
-          <div className="max-[480px]:p-4 flex items-center justify-center flex-col rounded-[15px] border-[2px] border-[#b4b4b4] bg-white">
+          <div className="p-4 flex items-center justify-center flex-col rounded-2xl shadow-md border-2 border-[#b4b4b4] bg-white">
             <i className="bi bi-wallet2  text-[50px] text-[#FFB500]"></i>
-            <h3 className="uppercase text-[15px] align-center text-center font-[700] mb-[20px]">Pago 100% seguro</h3>
-            <p className="text-[15px] text-justify">Tus datos y transacciones están protegidos con tecnología avanzada para garantizar tu tranquilidad.</p>
+            <h3 className="uppercase text-sm text-center font-bold mb-5">Pago 100% seguro</h3>
+            <p className="text-sm text-justify">Tus datos y transacciones están protegidos con tecnología avanzada para garantizar tu tranquilidad.</p>
           </div>
-          <div className="max-[480px]:p-4 flex items-center justify-center flex-col rounded-[15px] border-[2px] border-[#b4b4b4] bg-white">
+          <div className="p-4 flex items-center justify-center flex-col rounded-2xl shadow-md border-2 border-[#b4b4b4] bg-white">
             <i className="bi bi-people-fill  text-[50px] text-[#FFB500]"></i>
-            <h3 className="uppercase text-[15px] align-center text-center font-[700] mb-[20px]">Soporte</h3>
-            <p className="text-[15px] text-justify">Contamos con un equipo de atención disponible para responder tus consultas y ayudarte en todo momento.</p>
+            <h3 className="uppercase text-sm text-center font-bold mb-5">Soporte</h3>
+            <p className="text-sm text-justify">Contamos con un equipo de atención disponible para responder tus consultas y ayudarte en todo momento.</p>
           </div>
         </div>
+      </section>
+
+      <section
+        id="content-proyect"
+        className="p-5 m-4 mt-10 rounded-2xl flex flex-col items-start justify-center border-2 border-[#ffb500]" >
+        <div >
+          <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] justify-start font-bold mb-6"
+          >ACERCA DEL PROYECTO</h2>
+        </div>
+        <div>
+          <p>
+            The Product surge de la necesidad de conectar a las personas con productos que realmente les simplifiquen la vida. Nació como un proyecto que busca transformar la experiencia de compra online, poniendo al cliente en el centro y apostando a la innovación constante.
+          </p>
+          <p>
+            ¿Querés saber cómo comenzó The Product y qué hace único a nuestro proyecto?
+          </p>
+        </div>
+        <Link
+          to="/inicio"
+          className="mt-4 w-full max-[480px]:text-center p-2.5 rounded-[10px] border-none bg-[#FFB500] text-white text-sm font-medium"
+        > + CONOCER MAS
+        </Link>
       </section>
     </Layout>
   )

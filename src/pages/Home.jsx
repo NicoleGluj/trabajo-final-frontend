@@ -48,7 +48,7 @@ const Home = () => {
 
       <section
         id="content-services"
-        className="p-5 m-4 mt-10 rounded-2xl flex flex-col items-center justify-center bg-[#e4e4e462]">
+        className="p-5 m-4 rounded-2xl flex flex-col items-center justify-center bg-[#e4e4e462]">
         <div>
           <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] text-center font-bold mb-6">
             NUESTROS SERVICIOS
@@ -80,7 +80,7 @@ const Home = () => {
 
       <section
         id="content-proyect"
-        className="p-5 m-4 mt-10 rounded-2xl flex flex-col items-start justify-center border-2 border-[#ffb500]" >
+        className="p-5 m-4 rounded-2xl flex flex-col items-start justify-center border-2 border-[#ffb500]" >
         <div >
           <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] justify-start font-bold mb-6"
           >ACERCA DEL PROYECTO</h2>
@@ -94,7 +94,7 @@ const Home = () => {
           </p>
         </div>
         <Link
-          to="/inicio"
+          to="/proyect"
           className="mt-4 w-full max-[480px]:text-center p-2.5 rounded-[10px] border-none bg-[#FFB500] text-white text-sm font-medium"
         > + CONOCER MAS
         </Link>

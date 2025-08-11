@@ -13,12 +13,15 @@ const Inicio = () => {
   const [descriptionEdit, setDescriptionEdit] = useState("")
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
+  const [search, setSearch] = useState("")
+  const [filteredProducts, setFilteredProducts] = useState([])
 
   const fetchingProducts = async () => {
     const response = await fetch('https://fakestoreapi.com/products', { method: "GET" })
     const data = await response.json()
 
     setProducts(data)
+    setFilteredProducts(data)
   }
 
   useEffect(() => {
@@ -73,18 +76,43 @@ const Inicio = () => {
     }
   }
 
+  const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase()
+    setSearch(value)
+
+    if (!search) {
+      setFilteredProducts(products)
+    } else {
+      const filtered = products.filter(product =>
+        product.title.toLowerCase().includes(value) ||
+        product.category.toLowerCase().includes(value) ||
+        product.description.toLowerCase().includes(value)
+      )
+      setFilteredProducts(filtered)
+    }
+  }
+
 
   return (
     <Layout>
       <div className="p-5 m-4 rounded-2xl bg-[rgb(238,238,238)]">
-        <h2 className="text-5xl max-[880px]:text-[50px] max-[480px]:text-[45px] font-bold mb-2"
+        <h2 className="text-5xl max-[880px]:text-[50px] max-[480px]:text-[45px] font-bold mb-2 "
         >EXPLORA NUESTRO CATALOGO</h2>
         <p className="text-base"
         >Descubrí productos únicos y opciones para todos los gustos.</p>
+        <div>
+          <input
+            type="text"
+            placeholder="Buscar producto"
+            onChange={handleSearch}
+            value={search}
+            className="border-1 border-gray-500 bg-white p-2 rounded-full w-full mt-7" />
+        </div>
       </div>
+
       <div className="p-5 m-4 rounded-2xl bg-[rgb(238,238,238)] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
         {
-          products.map((product) =>
+          filteredProducts.map((product) =>
             <div
               key={product.id}
               className="p-4 bg-white rounded-2xl border-2 border-[#ffb500] flex flex-col items-center shadow-md h-full">

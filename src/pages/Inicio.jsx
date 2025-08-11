@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import Layout from "../components/Layout"
-import '../styles/pages/inicio.css'
 import { useAuth } from "../context/UserContext"
 
 const Inicio = () => {

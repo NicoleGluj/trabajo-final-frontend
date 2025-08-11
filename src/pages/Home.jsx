@@ -7,12 +7,12 @@ const Home = () => {
     <Layout>
       <section
         id="content-inicio"
-        className="bg-[url(src/assets/image-women-card.jpg)]  bg-[center_top_20%] bg-cover bg-no-repeat rounded-2xl h-[85vh] m-4 flex items-end justify-start">
-        <div className="p-4 m-2 rounded-2xl bg-gray-50/70">
-          <h1 className="text-[100px] min-[1441px]:text-[180px]  min-[1024px]:text-[130px] max-[880px]:text-[80px] max-[480px]:text-[53px] text-[#FFB500] font-extrabold">
+        className="bg-[url(src/assets/image-women-card-2.jpg)] max-[1124px]:bg-[center_right_10%] min-[1124px]:bg-[center_top_10%] bg-cover bg-no-repeat rounded-2xl h-[85vh] m-4 flex items-end justify-start">
+        <div className="p-4 m-2 rounded-2xl bg-gray-50/80">
+          <h1 className="text-[60px] min-[1441px]:text-[130px] min-[880px]:text-[90px] max-[480px]:text-[53px] text-[#FFB500] font-extrabold ">
             THE PRODUCT
           </h1>
-          <h2 className="text-[25px] min-[1441px]:text-[40px]  min-[1024px]:text-[30px] max-[880px]:text-[20px] max-[480px]:text-[17px] font-bold ">
+          <h2 className="text-[17px] min-[1441px]:text-[32px]  min-[880px]:text-[20px] max-[480px]:text-[17px] font-bold ">
             CONECTA CON UNA NUEVA FORMA DE COMPRAR.
           </h2>
         </div>
@@ -20,13 +20,13 @@ const Home = () => {
 
       <section
         id="content-about"
-        className="grid grid-cols-1 min-[670px]:grid-cols-2 lg:grid-cols-2 gap-5 p-5 max-[670px]:p-0 m-4 mt-10 rounded-2xl bg-[rgb(238,238,238)] items-center">
+        className="grid grid-cols-1 min-[670px]:grid-cols-2 gap-5 p-5 max-[670px]:p-0 m-4 mt-10 rounded-2xl bg-[rgb(238,238,238)] items-center h-min">
         <img
           src="src/assets/image-women-home.jpg"
           alt="Mujer comprando online con el celular"
-          className="w-full h-full object-cover rounded-2xl max-[670px]:hidden" />
-        <div className="text-white flex flex-col min-[1440px]:justify-around bg-[#FFB500] rounded-2xl p-6 gap-3 text-sm h-full min-[1440px]:px-[200px]">
-          <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] text-center font-bold mb-4  min-[1440px]:whitespace-nowrap">
+          className="size-full object-cover rounded-2xl max-[670px]:hidden" />
+        <div className="text-white flex flex-col min-[1440px]:justify-center bg-[#FFB500] rounded-2xl p-6 gap-3 text-sm h-full">
+          <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] text-center font-bold mb-4 min-[1440px]:whitespace-nowrap">
             ¿QUIENES SOMOS?
           </h2>
           <p className="font-normal text-justify">

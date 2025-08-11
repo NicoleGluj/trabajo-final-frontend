@@ -76,29 +76,42 @@ const Inicio = () => {
 
   return (
     <Layout>
-      <div className="inicio-title">
-        <h2>EXPLORA NUESTRO CATALOGO</h2>
-        <p>Descubrí productos únicos y opciones para todos los gustos.</p>
+      <div className="p-5 m-4 rounded-2xl bg-[rgb(238,238,238)]">
+        <h2 className="text-5xl max-[880px]:text-[50px] max-[480px]:text-[45px] font-bold mb-2"
+        >EXPLORA NUESTRO CATALOGO</h2>
+        <p className="text-base"
+        >Descubrí productos únicos y opciones para todos los gustos.</p>
       </div>
-      <div className="content-products">
+      <div className="p-5 m-4 rounded-2xl bg-[rgb(238,238,238)] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
         {
           products.map((product) =>
-            <div key={product.id} className="content-product">
-              <h4>Categoria: {product.category}</h4>
-              <div className="content-image">
-                <img src={product.image} alt={`Imagen de ${product.title}`} />
+            <div
+              key={product.id}
+              className="p-4 bg-white rounded-2xl border-2 border-[#ffb500] flex flex-col items-center shadow-md h-full">
+              <div className="h-1/2 text-center p-4">
+                <img className="object-contain h-full"
+                  src={product.image} alt={`Imagen de ${product.title}`} />
               </div>
-              <h2>{product.title}</h2>
-              <p>{product.description}</p>
-              <h3>${product.price}</h3>
-              {
-                user && <div className="content-button">
-                  <button
-                    onClick={() => handleOpenEdit(product)}
-                    className="button-act">ACTUALIZAR</button>
-                  <button onClick={() => handleDelete(product.id)} className="button-del">BORRAR</button>
-                </div>
-              }
+              <div className="h-1/2 flex flex-col items-center justify-around">
+                <h2 className="font-bold text-2xl uppercase text-justify"
+                >{product.title}</h2>
+                <p className="text-gray-500 line-clamp-3"
+                >{product.description}</p>
+                <h3 className="text-3xl font-bold text-[#ffb500]"
+                >${product.price}</h3>
+                <h4 className="uppercase text-sm text-gray-500 font-semibold"
+                >Categoria: {product.category}</h4>
+                {
+                  user && <div className="flex flex-row gap-3 w-full">
+                    <button
+                      className="px-5 py-2 bg-[#ffb500] rounded-full text-white font-bold w-1/2"
+                      onClick={() => handleOpenEdit(product)}
+                    >ACTUALIZAR</button>
+                    <button
+                      onClick={() => handleDelete(product.id)} className="px-5 py- border-2 border-[#ffb500] rounded-full text-[#ffb500] font-bold w-1/2">BORRAR</button>
+                  </div>
+                }
+              </div>
             </div>)
         }
       </div>

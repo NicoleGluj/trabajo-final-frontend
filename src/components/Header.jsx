@@ -18,8 +18,9 @@ const Header = () => {
     navigate("/")
   }
 
+
   return (
-    <header className="m-4 bg-[#ececec] p-2 rounded-2xl">
+    <header className="m-4">
       <nav className="min-[1024px]:flex min-[1024px]:flex-row min-[1024px]:items-center min-[1024px]:justify-between ">
         <section className="flex justify-between items-center">
           <div className="flex items-center justify-center">
@@ -35,17 +36,17 @@ const Header = () => {
 
         <section className={`min-[1024px]:flex min-[1224px]:flex-row ${isOpen ? 'flex' : 'hidden'} min-[1024px]:items-center`}>
           <ul className="w-full text-gray-700 mt-4 flex flex-col min-[1024px]:flex-row items-center justify-center mb-5 min-[1024px]:mb-0 min-[1024px]:gap-4 min-[1024px]:mt-0" >
-            <li className="mb-2 min-[1024px]:mb-0"><Link to="/">INICIO</Link></li>
+            <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><Link to="/">INICIO</Link></li>
             {
               user &&
-              <li className="mb-2 min-[1024px]:mb-0"><Link to="/dashboard">DASHBOARD</Link></li>
+              <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><Link to="/dashboard">DASHBOARD</Link></li>
             }
             {
               !user && <>
-                <li className="mb-2 min-[1024px]:mb-0"><a href="#content-about">CONOCENOS</a></li>
-                <li className="mb-2 min-[1024px]:mb-0"><a href="#content-services">SERVICIOS </a></li>
-                <li className="mb-2 min-[1024px]:mb-0"><Link to="/proyect">PROYECTO</Link></li>
-                <li className="mb-2 min-[1024px]:mb-0"><a href="#content-footer">CONTACTO </a></li>
+                <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><a href="#content-about">CONOCENOS</a></li>
+                <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><a href="#content-services">SERVICIOS </a></li>
+                <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><Link to="/proyect">PROYECTO</Link></li>
+                <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><a href="#content-footer">CONTACTO </a></li>
               </>
             }
           </ul>
@@ -55,20 +56,15 @@ const Header = () => {
           <div className="w-full items-center justify-center flex flex-row gap-3 mt-2 min-[1024px]:mt-0">
             {
               user &&
-              <button
-                className="bg-[#ffb500] px-4 py-1 rounded-full font-medium text-base text-black tracking-[1px]"
+              <button class="px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-white text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2"
                 onClick={handleLogout}>
                 <Link to="/home" >CERRAR SESION</Link>
               </button>
             }
             {
               !user && <>
-                <button className="text-black px-4 py-0.5 rounded-full font-medium text-base tracking-[1px] border-2 border-[#ffb500]">
-                  <Link to="/login">INGRESAR</Link>
-                </button>
-                <button className="bg-[#ffb500] px-4 py-1 rounded-full font-medium text-base text-black tracking-[1px]">
-                  <Link to="/register">REGISTRAR</Link>
-                </button>
+                <button class="px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-white text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2"> <Link to="/login">INGRESAR</Link></button>
+                <button class="px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-[#ffb500] text-white font-medium transition-all duration-300 hover:bg-white hover:ring-2 hover:ring-[#ffb500] hover:text-black hover:ring-offset-2"> <Link to="/register">REGISTRAR</Link></button>
               </>
             }
           </div>

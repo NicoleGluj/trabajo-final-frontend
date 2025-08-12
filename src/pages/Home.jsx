@@ -42,10 +42,9 @@ const Home = () => {
           </p>
           <Link
             to="/inicio"
-            className="mt-4 max-[480px]:w-full max-[480px]:text-center p-2 rounded-[10px] border-none bg-white text-[#FFB500] text-[20px] font-medium"
+            className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-105 flex items-center flex-col mt-4 p-2 text-[#FFB500] text-xl font-medium"
           > + VER CATALOGO
           </Link>
-
         </div>
 
         <div className="text-black flex flex-col min-[1440px]:justify-center bg-white border-2 border-[#ffb500] rounded-2xl gap-2 p-6">
@@ -61,7 +60,7 @@ const Home = () => {
           </p>
           <Link
             to="/proyect"
-            className="mt-4 max-[480px]:w-full max-[480px]:text-center p-2 rounded-[10px] border-none bg-[#FFB500] text-white text-[20px] font-medium"
+            className="transform rounded-2xl shadow-md transition duration-300 hover:scale-105 flex items-center flex-col mt-4 p-2 text-xl bg-[#FFB500] text-white text-[20px] font-medium"
           > + CONOCER MAS
           </Link>
         </div>

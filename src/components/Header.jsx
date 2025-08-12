@@ -25,7 +25,7 @@ const Header = () => {
         <section className="flex justify-between items-center">
           <div className="flex items-center justify-center">
             <img src="src\assets\icono-favicon.png" alt="logo TheProduct" className="size-7 mr-2" />
-            <h2 className="font-semibold text-xl">THE PRODUCT</h2>
+            <h2 className="font-semibold text-xl"><Link to="/">THE PRODUCT</Link></h2>
           </div>
           <div className="min-[1024px]:hidden">
             <i
@@ -58,7 +58,7 @@ const Header = () => {
               user &&
               <button class="px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-white text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2"
                 onClick={handleLogout}>
-                <Link to="/home" >CERRAR SESION</Link>
+                <Link to="/" >CERRAR SESION</Link>
               </button>
             }
             {

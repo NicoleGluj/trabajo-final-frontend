@@ -37,7 +37,10 @@ const Header = () => {
           <ul className="w-full text-gray-700 mt-4 flex flex-col min-[1024px]:flex-row items-center justify-center mb-5 min-[1024px]:mb-0 min-[1024px]:gap-4 min-[1024px]:mt-0" >
             <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><Link to="/">INICIO</Link></li>
             <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><Link to="/proyect">PROYECTO</Link></li>
-            <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><Link to="/inicio">CATALOGO</Link></li>
+            {
+              !user && <li className="mb-2 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><Link to="/inicio">CATALOGO</Link></li>
+            }
+
             <li className="mb-4 min-[1024px]:mb-0 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:w-full after:origin-bottom after:scale-x-0 after:bg-amber-400 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom hover:after:scale-x-100"><a href="#content-footer">CONTACTO </a></li>
             {
               user &&

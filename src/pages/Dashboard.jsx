@@ -55,6 +55,11 @@ const Dashboard = () => {
     setDescription("")
   }
 
+  const handleCloseProduct = () => {
+    setProduct(null)
+    setSuccess("")
+  }
+
 
   return (
     <Layout>
@@ -137,7 +142,7 @@ const Dashboard = () => {
         product &&
         <div>
           <div>
-            <h3 className="m-4 mt-6 text-xl max-[880px]:text-[50px] max-[480px]:text-[45px] font-semibold mb-3 text-gray-600"
+            <h3 className="m-4 mt-6 text-xl max-[880px]:text-[20px] max-[480px]:text-[18px] font-semibold mb-3 text-gray-600"
             >Visualización del nuevo producto:</h3>
           </div>
           <div className="m-4 p-4 bg-white rounded-2xl border-2 border-[#ffb500] flex flex-col items-center shadow-md h-full max-w-[300px]">
@@ -156,6 +161,10 @@ const Dashboard = () => {
               >Categoria: {product.category}</h4>
             </div>
           </div>
+          <button
+            onClick={handleCloseProduct}
+            className="m-4 transform rounded-2xl shadow-md transition duration-300 hover:scale-103 flex items-center flex-col mt-4 p-2 text-sm bg-[#FFB500] text-white font-medium"
+          >CERRAR VISUALIZACIÓN</button>
         </div>
       }
     </Layout>

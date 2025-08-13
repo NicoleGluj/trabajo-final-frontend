@@ -115,13 +115,13 @@ const Inicio = () => {
           filteredProducts.map((product) =>
             <div
               key={product.id}
-              className="p-4 bg-white rounded-2xl border-2 border-[#ffb500] flex flex-col items-center shadow-md h-full">
+              className="transform transition duration-300 hover:scale-103 p-4 bg-white rounded-2xl border-2 border-[#ffb500] flex flex-col items-center shadow-md max-h-[660px]">
               <div className="h-1/2 text-center p-4">
                 <img className="object-contain h-full"
                   src={product.image} alt={`Imagen de ${product.title}`} />
               </div>
               <div className="h-1/2 flex flex-col items-center justify-around">
-                <h2 className="font-bold text-2xl uppercase text-justify"
+                <h2 className="font-bold text-2xl uppercase text-justify line-clamp-2"
                 >{product.title}</h2>
                 <p className="text-gray-500 line-clamp-3"
                 >{product.description}</p>
@@ -132,11 +132,11 @@ const Inicio = () => {
                 {
                   user && <div className="flex flex-row gap-3 w-full">
                     <button
-                      className="px-5 py-2 bg-[#ffb500] rounded-full text-white font-bold w-1/2"
+                      className="transform shadow-md transition duration-300 hover:scale-103 px-5 py-2 bg-[#ffb500] rounded-full text-white font-bold w-1/2"
                       onClick={() => handleOpenEdit(product)}
                     >ACTUALIZAR</button>
                     <button
-                      onClick={() => handleDelete(product.id)} className="px-5 py- border-2 border-[#ffb500] rounded-full text-[#ffb500] font-bold w-1/2">BORRAR</button>
+                      onClick={() => handleDelete(product.id)} className="transform shadow-md transition duration-300 hover:scale-103 px-5 py- border-2 border-[#ffb500] rounded-full text-[#ffb500] font-bold w-1/2">BORRAR</button>
                   </div>
                 }
               </div>

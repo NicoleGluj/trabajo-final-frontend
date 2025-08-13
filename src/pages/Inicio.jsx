@@ -124,7 +124,7 @@ const Inicio = () => {
               <div className="h-1/2 flex flex-col items-center justify-around">
                 <h2 className="font-bold text-2xl uppercase text-center line-clamp-2"
                 >{product.title}</h2>
-                <p className="text-gray-500 line-clamp-3"
+                <p className="text-gray-500 line-clamp-3 break-all"
                 >{product.description}</p>
                 <h3 className="text-3xl font-bold text-[#ffb500]"
                 >${product.price}</h3>

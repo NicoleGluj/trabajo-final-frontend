@@ -52,6 +52,8 @@ const Dashboard = () => {
     setName("")
     setPrice("")
     setDescription("")
+    setCategory("")
+    setImage("")
   }
 
   const handleCloseProduct = () => {

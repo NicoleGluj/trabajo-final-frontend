@@ -59,7 +59,7 @@ const Register = () => {
 
           <form
             onSubmit={handleRegister}
-            className="flex items-center justify-center flex-col gap-4">
+            className="flex items-center justify-center flex-col gap-2">
             <div className="flex items-center justify-center flex-col gap-2">
               <label>Nombre de usuario:</label>
               <input

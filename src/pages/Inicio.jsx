@@ -133,11 +133,11 @@ const Inicio = () => {
                 {
                   user && <div className="flex flex-row gap-3 w-full">
                     <button
-                      className="transform shadow-md transition duration-300 hover:scale-103 px-5 py-2 bg-[#ffb500] rounded-full text-white font-bold w-1/2"
+                      className="transform shadow-md transition duration-300 hover:scale-106 py-1.5 bg-[#ffb500] rounded-full text-white font-bold w-1/2"
                       onClick={() => handleOpenEdit(product)}
                     >ACTUALIZAR</button>
                     <button
-                      onClick={() => handleDelete(product.id)} className="transform shadow-md transition duration-300 hover:scale-103 px-5 py- border-2 border-[#ffb500] rounded-full text-[#ffb500] font-bold w-1/2">BORRAR</button>
+                      onClick={() => handleDelete(product.id)} className="transform shadow-md transition duration-300 hover:scale-106 py-1.5 border-2 border-[#ffb500] rounded-full text-[#ffb500] font-bold w-1/2">BORRAR</button>
                   </div>
                 }
               </div>
@@ -187,7 +187,8 @@ const Inicio = () => {
             </div>
             <div className="flex flex-row w-full gap-2">
               <button
-                class="p-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-white text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2 w-full max-[480px]:w-min"
+                class="p-1 w-full max-[480px]:w-min
+                px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-white text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2"
               >ACTUALIZAR</button>
               <button
                 class="p-1 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-[#ffb500] text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2 w-1/3 max-[480px]:w-min"

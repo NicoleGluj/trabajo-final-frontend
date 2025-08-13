@@ -7,9 +7,9 @@ const Home = () => {
     <Layout>
       <section
         id="content-inicio"
-        className="bg-[url(src/assets/image-women-card-2.jpg)] max-[1124px]:bg-[center_right_10%] min-[1024px]:bg-[center_top_10%] bg-cover bg-no-repeat rounded-2xl h-[90vh] m-4 flex items-center justify-start">
+        className="bg-[url(src/assets/image-women-card-2.jpg)] max-[1124px]:bg-[center_right_10%] min-[1024px]:bg-[center_top_10%] max-[480px]:bg-none max-[480px]:border-5 max-[480px]:border-[#ffb500] max-[480px]:border-double bg-cover bg-no-repeat rounded-2xl h-[85vh] m-4 flex items-center justify-start">
         <div className="p-4 min-[1440px]:ml-20">
-          <h3 className="text-[13px] min-[1440px]:text-[17px] min-[880px]:text-[18px] max-[480px]:text-[15px] font-medium mb-2">
+          <h3 className="text-[13px] min-[1440px]:text-[17px] min-[880px]:text-[18px] max-[480px]:text-[15px] font-medium mb-2 ">
             POTENCIÁ TU NEGOCIO</h3>
 
           <h1 className="text-[40px] min-[1440px]:text-[65px] min-[880px]:text-[50px] max-[480px]:text-[45px] text-[#FFB500] font-extrabold min-[758px]:w-[50%] mb-5">
@@ -23,7 +23,7 @@ const Home = () => {
 
       <section
         id="content-about"
-        className="grid grid-cols-1 min-[670px]:grid-cols-2 gap-5 p-5 max-[670px]:p-0  m-4 mt-10 rounded-2xl bg-[rgb(238,238,238)] max-[670px]:bg-white text-justify items-stretch">
+        className="grid grid-cols-1 min-[670px]:grid-cols-2 gap-5 p-5 max-[670px]:p-0 m-4 rounded-2xl bg-[rgb(238,238,238)] max-[670px]:bg-white text-justify items-stretch">
         <div className="row-span-2 col-start-1 row-start-1">
           <img
             src="src/assets/image-women-home.jpg"
@@ -49,7 +49,7 @@ const Home = () => {
 
         <div className="text-black flex flex-col min-[1440px]:justify-center bg-white border-2 border-[#ffb500] rounded-2xl gap-2 p-6">
           <div>
-            <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] text-start max-[670px]:text-center font-bold mb-4 min-[1440px]:whitespace-nowrap "
+            <h2 className="text-6xl max-[880px]:text-[50px] max-[480px]:text-[45px] text-start max-[670px]:text-center font-bold mb-4 "
             >ACERCA DEL PROYECTO</h2>
           </div>
           <p>

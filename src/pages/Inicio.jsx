@@ -67,13 +67,14 @@ const Inicio = () => {
 
     if (response.ok) {
       const data = await response.json()
-      setProducts(prevProduct =>
+      setFilteredProducts(prevProduct =>
         prevProduct.map((product) =>
           product.id === productToEdit.id
             ? data
             : product)
       )
     }
+    setShowPopUp(null)
   }
 
   const handleSearch = (e) => {
@@ -110,18 +111,18 @@ const Inicio = () => {
         </div>
       </div>
 
-      <div className="p-5 m-4 rounded-2xl bg-[rgb(238,238,238)] grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5">
+      <div className="p-5 m-4 max-[480px]:m-0 rounded-2xl bg-[rgb(238,238,238)] max-[480px]:bg-white grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] gap-5">
         {
           filteredProducts.map((product) =>
             <div
               key={product.id}
-              className="transform transition duration-300 hover:scale-103 p-4 bg-white rounded-2xl border-2 border-[#ffb500] flex flex-col items-center shadow-md max-h-[660px]">
+              className="transform transition duration-300 hover:scale-103 p-4 bg-white rounded-2xl border-2 border-[#ffb500] flex flex-col items-center shadow-md max-h-[660px] w-auto">
               <div className="h-1/2 text-center p-4">
                 <img className="object-contain h-full"
                   src={product.image} alt={`Imagen de ${product.title}`} />
               </div>
               <div className="h-1/2 flex flex-col items-center justify-around">
-                <h2 className="font-bold text-2xl uppercase text-justify line-clamp-2"
+                <h2 className="font-bold text-2xl uppercase text-center line-clamp-2"
                 >{product.title}</h2>
                 <p className="text-gray-500 line-clamp-3"
                 >{product.description}</p>
@@ -148,7 +149,7 @@ const Inicio = () => {
       {
         showPopUp &&
         <section
-          className="fixed bg-white border-4 border-[#ffb500] top-1/2 w-fit left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 rounded-2xl shadow-xl">
+          className="fixed bg-white border-4 border-[#ffb500] top-1/2 w-auto min-w-[290px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 rounded-2xl shadow-xl">
           <h2 className="text-4xl max-[880px]:text-[40px] max-[480px]:text-[36px] font-bold mb-2"
           >EDITAR PRODUCTO</h2>
           <form className="flex flex-col items-center justify-center mt-4"
@@ -186,10 +187,10 @@ const Inicio = () => {
             </div>
             <div className="flex flex-row w-full gap-2">
               <button
-                class="px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-white text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2 w-full"
+                class="p-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-white text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2 w-full max-[480px]:w-min"
               >ACTUALIZAR</button>
               <button
-                class="px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-[#ffb500] text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2 w-1/3"
+                class="p-1 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-[#ffb500] text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2 w-1/3 max-[480px]:w-min"
                 onClick={() => setShowPopUp(null)}>CERRAR</button>
 
             </div>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
-import '../styles/pages/dashboard.css'
 
 
 const Dashboard = () => {

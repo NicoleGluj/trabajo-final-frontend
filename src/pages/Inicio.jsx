@@ -31,7 +31,7 @@ const Inicio = () => {
   const handleDelete = async (id) => {
     const response = await fetch(`https://fakestoreapi.com/products/${id}`, { method: "DELETE" })
 
-    setProducts(prevProducts => prevProducts.filter((product) => product.id != id))
+    setFilteredProducts(filteredProducts => filteredProducts.filter((product) => product.id !== id))
   }
 
   const handleOpenEdit = (product) => {
@@ -80,7 +80,7 @@ const Inicio = () => {
     const value = e.target.value.toLowerCase()
     setSearch(value)
 
-    if (!search) {
+    if (!value) {
       setFilteredProducts(products)
     } else {
       const filtered = products.filter(product =>
@@ -146,38 +146,52 @@ const Inicio = () => {
 
       {/* SECTION ACTUALIZAR */}
       {
-        showPopUp && <section className="content-popup">
-          <h2>Editar Producto</h2>
-          <form className="content-edit-form" onSubmit={handleUpdate}>
-            <div className="content-input-edit">
+        showPopUp &&
+        <section
+          className="fixed bg-white border-4 border-[#ffb500] top-1/2 w-fit left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 rounded-2xl shadow-xl">
+          <h2 className="text-4xl max-[880px]:text-[40px] max-[480px]:text-[36px] font-bold mb-2"
+          >EDITAR PRODUCTO</h2>
+          <form className="flex flex-col items-center justify-center mt-4"
+            onSubmit={handleUpdate}>
+            <div>
               <input
+                className="p-2 bg-[rgba(243,243,243,0.58)] w-full border-1 rounded-xl border-amber-400 text-sm mb-4"
                 type="text"
                 placeholder="Ingrese el titulo"
                 value={titleEdit}
                 onChange={(e) => setTitleEdit(e.target.value)} />
               <input
+                className="p-2   bg-[rgba(243,243,243,0.58)] w-full border-1 rounded-xl border-amber-400 text-sm mb-4"
                 type="number"
                 placeholder="Ingrese el precio"
                 value={priceEdit}
                 onChange={(e) => setPriceEdit(e.target.value)} />
               <textarea
+                className="p-2  bg-[rgba(243,243,243,0.58)] w-full border-1 rounded-xl border-amber-400 text-sm mb-4"
                 placeholder="Ingrese la descripcion"
                 value={descriptionEdit}
                 onChange={(e) => setDescriptionEdit(e.target.value)} ></textarea>
               <input
+                className="p-2  bg-[rgba(243,243,243,0.58)] w-full border-1 rounded-xl border-amber-400 text-sm mb-4"
                 type="text"
                 placeholder="Ingrese la categoria"
                 value={categoryEdit}
                 onChange={(e) => setCategoryEdit(e.target.value)} />
               <input
+                className="p-2  bg-[rgba(243,243,243,0.58)] w-full border-1 rounded-xl border-amber-400 text-sm mb-4"
                 type="text"
                 placeholder="Ingrese la URL de la imagen"
                 value={imageEdit}
                 onChange={(e) => setImageEdit(e.target.value)} />
             </div>
-            <div className="content-button-edit">
-              <button onClick={() => setShowPopUp(null)}>X CERRAR</button>
-              <button>ACTUALIZAR</button>
+            <div className="flex flex-row w-full gap-2">
+              <button
+                class="px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-white text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2 w-full"
+              >ACTUALIZAR</button>
+              <button
+                class="px-5 py-1 overflow-hidden rounded-full border-2 border-[#ffb500] bg-[#ffb500] text-black font-medium transition-all duration-300 hover:bg-[#ffb500] hover:ring-2 hover:ring-[#ffb500] hover:text-white hover:ring-offset-2 w-1/3"
+                onClick={() => setShowPopUp(null)}>CERRAR</button>
+
             </div>
           </form>
 

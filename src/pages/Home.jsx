@@ -7,7 +7,7 @@ const Home = () => {
     <Layout>
       <section
         id="content-inicio"
-        className="bg-[url(src/assets/image-women-card-2.jpg)] max-[1124px]:bg-[center_right_10%] min-[1024px]:bg-[center_top_10%] bg-cover bg-no-repeat rounded-2xl h-[85vh] m-4 flex items-center justify-start">
+        className="bg-[url(src/assets/image-women-card-2.jpg)] max-[1124px]:bg-[center_right_10%] min-[1024px]:bg-[center_top_10%] bg-cover bg-no-repeat rounded-2xl h-[90vh] m-4 flex items-center justify-start">
         <div className="p-4 min-[1440px]:ml-20">
           <h3 className="text-[13px] min-[1440px]:text-[17px] min-[880px]:text-[18px] max-[480px]:text-[15px] font-medium mb-2">
             POTENCIÁ TU NEGOCIO</h3>
@@ -42,7 +42,7 @@ const Home = () => {
           </p>
           <Link
             to="/inicio"
-            className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-105 flex items-center flex-col mt-4 p-2 text-[#FFB500] text-xl font-medium"
+            className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-103 flex items-center flex-col mt-4 p-2 text-[#FFB500] text-xl font-medium"
           > + VER CATALOGO
           </Link>
         </div>
@@ -60,7 +60,7 @@ const Home = () => {
           </p>
           <Link
             to="/proyect"
-            className="transform rounded-2xl shadow-md transition duration-300 hover:scale-105 flex items-center flex-col mt-4 p-2 text-xl bg-[#FFB500] text-white text-[20px] font-medium"
+            className="transform rounded-2xl shadow-md transition duration-300 hover:scale-103 flex items-center flex-col mt-4 p-2 text-xl bg-[#FFB500] text-white text-[20px] font-medium"
           > + CONOCER MAS
           </Link>
         </div>
@@ -75,22 +75,22 @@ const Home = () => {
           </h2>
         </div>
         <div className="w-full grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-3 items-stretch justify-center">
-          <div className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-105 p-4 flex items-center justify-center flex-col border-2 border-[#b4b4b4]">
+          <div className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-103 p-4 flex items-center justify-center flex-col border-2 border-[#b4b4b4]">
             <i className="bi bi-bag-plus text-[50px] text-[#FFB500]"></i>
             <h3 className="uppercase text-sm text-center font-bold mb-5">Compra fácil y rápida</h3>
             <p className="text-sm text-justify">Hacé tu pedido en pocos pasos y disfrutá de una experiencia sencilla y sin complicaciones.</p>
           </div>
-          <div className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-105 p-4 flex items-center justify-center flex-col border-2 border-[#b4b4b4]">
+          <div className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-103 p-4 flex items-center justify-center flex-col border-2 border-[#b4b4b4]">
             <i className="bi bi-box-seam  text-[50px] text-[#FFB500]"></i>
             <h3 className="uppercase text-sm text-center font-bold mb-5">Envios a todo el país</h3>
             <p className="text-sm text-justify">Enviamos a todo el país para que tus compras lleguen rápido y seguro hasta la puerta de tu casa.</p>
           </div>
-          <div className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-105 p-4 flex items-center justify-center flex-col border-2 border-[#b4b4b4]">
+          <div className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-103 p-4 flex items-center justify-center flex-col border-2 border-[#b4b4b4]">
             <i className="bi bi-wallet2  text-[50px] text-[#FFB500]"></i>
             <h3 className="uppercase text-sm text-center font-bold mb-5">Pago 100% seguro</h3>
             <p className="text-sm text-justify">Tus datos y transacciones están protegidos con tecnología avanzada para garantizar tu tranquilidad.</p>
           </div>
-          <div className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-105 p-4 flex items-center justify-center flex-col border-2 border-[#b4b4b4]">
+          <div className="transform rounded-2xl bg-white shadow-md transition duration-300 hover:scale-103 p-4 flex items-center justify-center flex-col border-2 border-[#b4b4b4]">
             <i className="bi bi-people-fill  text-[50px] text-[#FFB500]"></i>
             <h3 className="uppercase text-sm text-center font-bold mb-5">Soporte</h3>
             <p className="text-sm text-justify">Contamos con un equipo de atención disponible para responder tus consultas y ayudarte en todo momento.</p>

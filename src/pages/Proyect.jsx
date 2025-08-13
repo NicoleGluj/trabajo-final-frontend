@@ -12,7 +12,7 @@ const Proyect = () => {
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white p-6 rounded-2xl">
+          <div className="transform transition duration-300 hover:scale-102 bg-white p-6 rounded-2xl shadow-sm">
             <div className="flex flex-col items-center gap-6">
               <i class="bi bi-columns-gap text-5xl text-[#ffb500]"></i>
               <h3 className="text-2xl font-bold mb-4"
@@ -24,7 +24,7 @@ const Proyect = () => {
               </p>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-2xl col-start-1">
+          <div className="transform transition duration-300 hover:scale-102 bg-white p-6 rounded-2xl col-start-1 shadow-sm">
             <div className="flex flex-col items-center gap-6">
               <i class="bi bi-person-check-fill text-5xl text-[#ffb500]"></i>
               <h3 className="text-2xl font-bold mb-4"
@@ -36,7 +36,7 @@ const Proyect = () => {
               </p>
             </div>
           </div>
-          <div className="bg-white p-6 rounded-2xl row-span-2 col-start-2 row-start-1">
+          <div className="transform transition duration-300 hover:scale-102 bg-white p-6 rounded-2xl row-span-2 col-start-2 row-start-1 shadow-sm">
             <div className="flex flex-col items-center gap-6">
               <i class="bi bi-wrench text-5xl text-[#ffb500]"></i>
               <h3 className="text-2xl font-bold mb-4"
